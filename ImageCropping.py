@@ -7,6 +7,10 @@ from PIL import Image as pic
 '''
 
 filepath = "C:\\my documents\\pictures\\AZ-900_PresentationDeck\\"
+start_x = 624
+start_y = 191
+end_x = start_x + 768
+end_y = start_y + 434
 
 def image_crop():
     global filepath
@@ -33,7 +37,7 @@ def image_crop():
 
         # Perform operations on the image here
         if pic_size(image) == 2029440:
-            image = image.crop((624, 191, 1392, 625))
+            image = image.crop((start_x, start_y, end_x, end_y))
         else:
             continue
 
